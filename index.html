@@ -123,7 +123,7 @@
       );
     };
 
-    const tabs = ["Přehled trhu", "Konkurence", "Cenotvorba", "Mezera & Příležitost", "Rizika"];
+    const tabs = ["Přehled trhu", "Konkurence", "Cenotvorba", "Mezera & Příležitost"];
 
     function MarketAnalysis() {
       const [activeTab, setActiveTab] = useState(0);
@@ -377,53 +377,6 @@
               </div>
             )}
 
-            {/* TAB 4: Rizika */}
-            {activeTab === 4 && (
-              <div style={{ animation: "fadeUp 0.35s ease" }}>
-                <SectionLabel num={8} text="Riziková mapa" />
-                <div style={{ marginBottom: "24px" }}>
-                  <div style={{ fontSize: "10px", fontWeight: "700", color: MID_GRAY, fontFamily: "monospace", letterSpacing: "2px", padding: "8px 12px", background: LIGHT_BG, textTransform: "uppercase", marginBottom: "8px" }}>KRITICKÁ RIZIKA — musí být řešena před prvním klientem</div>
-                  <RiskItem level="KRITICKÉ" title="Odpovědnost za škody během workshopu"
-                    desc="Pokud se účastník zraní (keramika, nůž, horká hmota), kdo nese odpovědnost? Bez smlouvy ručíte vy nebo umělec osobně."
-                    mitigation="Smlouva s umělcem musí explicitně přenést odpovědnost. Pojistka odpovědnosti za škodu pro každého umělce jako podmínka onboardingu." />
-                  <RiskItem level="KRITICKÉ" title="Právní struktura — S.R.O. vs. OSVČ"
-                    desc="Při škodě nebo sporu jsou zakladatelé na OSVČ osobně odpovědní celým svým majetkem. Tři spoluzakladatelé bez s.r.o. = tři různé osobní rizika."
-                    mitigation="Registrovat s.r.o. před první zakázkou. Základní kapitál 1 Kč je symbolický — důležitá je ochrana osobního majetku." />
-                  <RiskItem level="KRITICKÉ" title="Cold start — žádní umělci = žádní klienti"
-                    desc="Bez prověřené sítě umělců nemůže firma fungovat. Bez klientů umělci nevidí důvod se registrovat. Klasický marketplace chicken-and-egg problém."
-                    mitigation="Onboard 5–8 umělců RUČNĚ z osobní sítě před jakoukoli veřejnou komunikací. Teprve pak oslovovat B2B klienty." />
-                </div>
-                <div style={{ marginBottom: "24px" }}>
-                  <div style={{ fontSize: "10px", fontWeight: "700", color: MID_GRAY, fontFamily: "monospace", letterSpacing: "2px", padding: "8px 12px", background: LIGHT_BG, textTransform: "uppercase", marginBottom: "8px" }}>STŘEDNÍ RIZIKA — sledovat a mít plán</div>
-                  <RiskItem level="STŘEDNÍ" title="Konfetti nebo jiný hráč přijde do ČR"
-                    desc="Konfetti (Berlín) má přesně váš model. ClassBento v prosinci 2024 akvizoval Obby — aktivně expanduje. Pokud budou mít budget, mohou Czech market lokalizovat."
-                    mitigation="Být první, budovat brand a síť umělců rychle. Lokální znalost a vztahy jsou váš příkop — zahraniční platforma to nedokáže zkopírovat snadno." />
-                  <RiskItem level="STŘEDNÍ" title="Sezónnost — 60 % obratu ve 4 měsících"
-                    desc="Vánoční sezóna (říjen–prosinec) a jarní sezóna (březen–duben) tvoří bulk poptávky. Zbývající měsíce mohou být slabé."
-                    mitigation="B2C kanál (veřejné workshopy) jako cushion v mezisezóně. Roční předplatné nebo firemní balíčky pro pravidelné klienty." />
-                  <RiskItem level="STŘEDNÍ" title="Kvalita lektorů — jeden špatný workshop zničí brand"
-                    desc="Pokud umělec odvede špatný workshop, klient obviní platformu, ne umělce. Jedna negativní reference na LinkedIn = velká ztráta."
-                    mitigation="Přísný onboarding s testovacím workshopem. Pravidelné hodnocení. Jasný exit protokol pro umělce pod standardem." />
-                </div>
-                <div style={{ marginBottom: "24px" }}>
-                  <div style={{ fontSize: "10px", fontWeight: "700", color: MID_GRAY, fontFamily: "monospace", letterSpacing: "2px", padding: "8px 12px", background: LIGHT_BG, textTransform: "uppercase", marginBottom: "8px" }}>NÍZKÁ RIZIKA — monitor</div>
-                  <RiskItem level="NÍZKÉ" title="Ekonomická recese snižuje B2B budget na teambuilding"
-                    desc="Při ekonomickém ochlazení jsou teambuildingy první položka, která se škrtá z HR rozpočtu."
-                    mitigation="Nabídnout levnější B2C alternativu, positionovat jako employee benefit (ne luxus) — těžší k seškrtání." />
-                  <RiskItem level="NÍZKÉ" title="Umělci obcházejí platformu po prvním kontaktu"
-                    desc="Po prvním setkání se umělci s klienty dohodnou přímo a přeskočí vaši provizi."
-                    mitigation="Přinášet hodnotu nad rámec zprostředkování: fakturace, pojistka, koordinace, marketing. Smluvně ošetřit protekci." />
-                </div>
-                <div style={{ background: "#f0fdf4", border: `1px solid #86efac`, padding: "16px 20px" }}>
-                  <div style={{ fontSize: "10px", fontWeight: "700", color: "#14532d", fontFamily: "monospace", letterSpacing: "2px", marginBottom: "8px" }}>SHRNUTÍ: TOP 3 akce tento týden</div>
-                  <div style={{ fontSize: "11px", color: "#15803d", lineHeight: "2" }}>
-                    <strong>1.</strong> Zahájit zakládání s.r.o. (zvládnutelné online přes eIdentitu, cca 3–4 týdny)<br />
-                    <strong>2.</strong> Oslovit 5–8 umělců z osobní sítě a získat jejich souhlas s podmínkami spolupráce<br />
-                    <strong>3.</strong> Zmapovat 5 potenciálních B2B klientů z osobní sítě (HR/event kontakty) pro pilotní zakázky
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       );
