@@ -123,7 +123,7 @@
       );
     };
 
-    const tabs = ["Přehled trhu", "Konkurence", "Zákazníci B2B", "Cenotvorba", "Mezera & Příležitost", "Rizika"];
+    const tabs = ["Přehled trhu", "Konkurence", "Cenotvorba", "Mezera & Příležitost", "Rizika"];
 
     function MarketAnalysis() {
       const [activeTab, setActiveTab] = useState(0);
@@ -301,103 +301,8 @@
               </div>
             )}
 
-            {/* TAB 2: Zákazníci B2B */}
+            {/* TAB 2: Cenotvorba */}
             {activeTab === 2 && (
-              <div style={{ animation: "fadeUp 0.35s ease" }}>
-                <SectionLabel num={3} text="Zákaznické segmenty B2B" />
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "24px" }}>
-                  {[
-                    {
-                      segment: "Tech & Startup firmy",
-                      priority: "PRIMÁRNÍ",
-                      color: PLP_BLUE,
-                      size: "Praha: 700+ startupů, stovky tech firem",
-                      budget: "1 500–3 000 Kč/os.",
-                      trigger: "Employer branding, udržení talentu, remote-friendly benefity",
-                      kdo: "HR Manager / Office Manager",
-                      poznamka: "Nejotevřenější ke kreativním zážitkům, sdílí na LinkedIn = bezplatný marketing pro vás"
-                    },
-                    {
-                      segment: "Korporace (FMCG, Finance, Pharma)",
-                      priority: "PRIMÁRNÍ",
-                      color: PLP_BLUE,
-                      size: "Desítky korporátních HQ v Praze",
-                      budget: "1 200–2 500 Kč/os.",
-                      trigger: "Roční teambuilding, vánoční večírek, onboarding nových týmů",
-                      kdo: "Events/Marketing Coordinator, HR BP",
-                      poznamka: "Větší skupiny (20–80 os.), opakující se zakázky, potřeba faktury jako 'školení'"
-                    },
-                    {
-                      segment: "Kreativní agentury & studia",
-                      priority: "SEKUNDÁRNÍ",
-                      color: "#7c3aed",
-                      size: "Stovky v Praze a Brně",
-                      budget: "800–1 800 Kč/os.",
-                      trigger: "Interní inspirace, workshop pro klienty, team bonding",
-                      kdo: "Zakladatel / Creative Director",
-                      poznamka: "Menší skupiny, ale rychlé rozhodování. Stanou se ambasadory pokud se jim líbí"
-                    },
-                    {
-                      segment: "SME — střední podniky",
-                      priority: "SEKUNDÁRNÍ",
-                      color: "#7c3aed",
-                      size: "Největší počet, ale roztříštěný",
-                      budget: "600–1 200 Kč/os.",
-                      trigger: "Firemní večírek, motivace týmu, odměna zaměstnanců",
-                      kdo: "Jednatel / asistentka jednatele",
-                      poznamka: "Rozhodují rychle, ale mají nižší budget. Vhodné pro standardizované balíčky"
-                    },
-                  ].map((s, i) => (
-                    <div key={i} style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderTop: `3px solid ${s.color}`, padding: "20px" }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
-                        <div style={{ fontSize: "12px", fontWeight: "700", color: PLP_BLUE }}>{s.segment}</div>
-                        <Tag text={s.priority} color={s.color} />
-                      </div>
-                      <div style={{ fontSize: "10px", color: MID_GRAY, fontFamily: "monospace", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "4px" }}>Velikost segmentu</div>
-                      <div style={{ fontSize: "11px", color: DARK_GRAY, marginBottom: "10px" }}>{s.size}</div>
-                      <div style={{ fontSize: "10px", color: MID_GRAY, fontFamily: "monospace", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "4px" }}>Cenový rozsah</div>
-                      <div style={{ fontSize: "13px", fontWeight: "700", color: s.color, marginBottom: "10px" }}>{s.budget}</div>
-                      <div style={{ fontSize: "10px", color: MID_GRAY, fontFamily: "monospace", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "4px" }}>Nákupní trigger</div>
-                      <div style={{ fontSize: "11px", color: DARK_GRAY, marginBottom: "10px" }}>{s.trigger}</div>
-                      <div style={{ fontSize: "10px", color: MID_GRAY, fontFamily: "monospace", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "4px" }}>Rozhodovatel</div>
-                      <div style={{ fontSize: "11px", color: DARK_GRAY, marginBottom: "10px" }}>{s.kdo}</div>
-                      <div style={{ background: LIGHT_BG, padding: "10px", borderLeft: `2px solid ${s.color}` }}>
-                        <div style={{ fontSize: "10px", color: DARK_GRAY, lineHeight: "1.5" }}>{s.poznamka}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <SectionLabel num={4} text="Customer journey — cesta B2B zákazníka" />
-                <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, padding: "24px", marginBottom: "24px" }}>
-                  <div style={{ display: "flex", gap: "0", flexWrap: "nowrap", overflowX: "auto" }}>
-                    {[
-                      { step: "01", phase: "Trigger", desc: "Blíží se vánoční večírek / HR dostane rozpočet / nový tým potřebuje bonding", icon: "💡" },
-                      { step: "02", phase: "Hledání", desc: "Google: 'kreativní teambuilding Praha', LinkedIn doporučení, ústní reference kolegů", icon: "🔍" },
-                      { step: "03", phase: "Porovnání", desc: "2–4 nabídky, hodnotí: cena/os., originalita, reference, rychlost odpovědi", icon: "⚖️" },
-                      { step: "04", phase: "Rozhodnutí", desc: "Vybere dodavatele — klíčové: důvěra, snadná komunikace, transparentní cena", icon: "✅" },
-                      { step: "05", phase: "Zážitek", desc: "Samotný workshop — kvalita je vše, z toho vychází doporučení dalším", icon: "🎨" },
-                      { step: "06", phase: "Loajalita", desc: "Spokojena HR = opakuje příští rok, doporučuje kolegyním v jiných firmách", icon: "🔄" },
-                    ].map((item, i) => (
-                      <div key={i} style={{ flex: "0 0 150px", padding: "16px 12px", borderRight: i < 5 ? `1px dashed ${BORDER}` : "none", textAlign: "center" }}>
-                        <div style={{ fontSize: "20px", marginBottom: "8px" }}>{item.icon}</div>
-                        <div style={{ fontSize: "10px", fontWeight: "700", color: RED_ACCENT, fontFamily: "monospace", letterSpacing: "2px", marginBottom: "4px" }}>{item.step}</div>
-                        <div style={{ fontSize: "11px", fontWeight: "700", color: PLP_BLUE, marginBottom: "8px" }}>{item.phase}</div>
-                        <div style={{ fontSize: "10px", color: MID_GRAY, lineHeight: "1.5" }}>{item.desc}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div style={{ marginTop: "16px", padding: "12px 16px", background: "#fff8e1", border: `1px solid #fbbf24` }}>
-                    <div style={{ fontSize: "10px", color: "#92400e" }}>
-                      <strong>Klíčová intervence:</strong> Vaše platforma musí zachytit fáze 02–03 (SEO, LinkedIn, rychlá poptávka) a výrazně zkrátit čas od poptávky k objednávce. Dnes trvá B2B firma průměrně 3–7 dní, než obdrží nabídku od tradičních agentur.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* TAB 3: Cenotvorba */}
-            {activeTab === 3 && (
               <div style={{ animation: "fadeUp 0.35s ease" }}>
                 <SectionLabel num={5} text="Benchmarking cen na českém trhu" />
                 <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, padding: "24px", marginBottom: "24px" }}>
@@ -493,8 +398,8 @@
               </div>
             )}
 
-            {/* TAB 4: Mezera a Příležitost */}
-            {activeTab === 4 && (
+            {/* TAB 3: Mezera a Příležitost */}
+            {activeTab === 3 && (
               <div style={{ animation: "fadeUp 0.35s ease" }}>
                 <SectionLabel num={6} text="Tržní mezera a positioning" />
                 <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderTop: `3px solid ${PLP_BLUE}`, padding: "24px", marginBottom: "24px" }}>
@@ -589,8 +494,8 @@
               </div>
             )}
 
-            {/* TAB 5: Rizika */}
-            {activeTab === 5 && (
+            {/* TAB 4: Rizika */}
+            {activeTab === 4 && (
               <div style={{ animation: "fadeUp 0.35s ease" }}>
                 <SectionLabel num={8} text="Riziková mapa" />
                 <div style={{ marginBottom: "24px" }}>
