@@ -304,7 +304,7 @@
             {/* TAB 2: Cenotvorba */}
             {activeTab === 2 && (
               <div style={{ animation: "fadeUp 0.35s ease" }}>
-                <SectionLabel num={5} text="Benchmarking cen na českém trhu" />
+                <SectionLabel num={3} text="Benchmarking cen na českém trhu" />
                 <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, padding: "24px", marginBottom: "24px" }}>
                   <div style={{ fontSize: "12px", fontWeight: "700", color: PLP_BLUE, letterSpacing: "1px", textTransform: "uppercase", marginBottom: "16px" }}>Přehled tržních cen kreativních workshopů (B2B, Praha)</div>
                   <div style={{ overflowX: "auto" }}>
@@ -325,7 +325,7 @@
                           ["Keramika / točení", "1 000–1 800 Kč", "3–4 hod", "8 os.", "Ateliér", "Různí"],
                           ["Dřevěné logo (pyrogravura)", "800–1 400 Kč", "2–3 hod", "10 os.", "Mobile", "DílnaNaKolech"],
                           ["Mozaika / kolektivní obraz", "1 200–2 200 Kč", "3–4 hod", "15 os.", "Mobile", "MalováníKreslení"],
-                          ["Prémiový art workshop (kurátorský)", "1 800–3 500 Kč", "3–4 hod", "10–20 os.", "Ateliér umělce", "VAŠE POZICE"],
+                          ["Prémiový art workshop (kurátorský)", "1 800–3 500 Kč", "3–4 hod", "10–20 os.", "", ""],
                         ].map((row, i) => (
                           <tr key={i} style={{ background: i === 7 ? "#fff3e0" : i % 2 === 0 ? CARD_BG : LIGHT_BG, fontWeight: i === 7 ? "700" : "400" }}>
                             {row.map((cell, j) => (
