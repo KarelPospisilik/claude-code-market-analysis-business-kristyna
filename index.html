@@ -337,64 +337,6 @@
                     </table>
                   </div>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "24px" }}>
-                  <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderTop: `3px solid ${PLP_BLUE}`, padding: "20px" }}>
-                    <div style={{ fontSize: "12px", fontWeight: "700", color: PLP_BLUE, marginBottom: "16px" }}>Doporučená cenová strategie</div>
-                    {[
-                      { tier: "ZÁKLADNÍ", price: "990–1 490 Kč/os.", desc: "Standartní kreativní workshop (2–3h), 10+ osob, vybavení v ceně" },
-                      { tier: "PREMIUM", price: "1 690–2 490 Kč/os.", desc: "Prémiový umělec, menší skupina (8–15 os.), ateliér umělce, příběh" },
-                      { tier: "EXKLUSIVNÍ", price: "2 500–4 000 Kč/os.", desc: "Na míru, kolaborativní dílo pro firmu, VIP zážitek, foto/video" },
-                    ].map((t, i) => (
-                      <div key={i} style={{ padding: "12px", background: LIGHT_BG, border: `1px solid ${BORDER}`, marginBottom: "8px" }}>
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "4px" }}>
-                          <Tag text={t.tier} color={i === 0 ? "#0891b2" : i === 1 ? PLP_BLUE : RED_ACCENT} />
-                          <span style={{ fontSize: "13px", fontWeight: "700", color: PLP_BLUE }}>{t.price}</span>
-                        </div>
-                        <div style={{ fontSize: "10px", color: MID_GRAY }}>{t.desc}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderTop: `3px solid ${RED_ACCENT}`, padding: "20px" }}>
-                    <div style={{ fontSize: "12px", fontWeight: "700", color: PLP_BLUE, marginBottom: "16px" }}>Model příjmů — provizní logika</div>
-                    <div style={{ fontSize: "11px", color: DARK_GRAY, lineHeight: "1.8" }}>
-                      <div style={{ padding: "10px 0", borderBottom: `1px solid ${BORDER}` }}>
-                        <span style={{ fontWeight: "700", color: PLP_BLUE }}>Marketplace provize: 20–25 %</span><br />
-                        <span style={{ color: MID_GRAY }}>Z každé objednávky přes platformu (benchmark: ClassBento 17–20 %)</span>
-                      </div>
-                      <div style={{ padding: "10px 0", borderBottom: `1px solid ${BORDER}` }}>
-                        <span style={{ fontWeight: "700", color: PLP_BLUE }}>B2B managed service: 30–35 %</span><br />
-                        <span style={{ color: MID_GRAY }}>Plný servis — komunikace, koordinace, follow-up, fakturace</span>
-                      </div>
-                      <div style={{ padding: "10px 0", borderBottom: `1px solid ${BORDER}` }}>
-                        <span style={{ fontWeight: "700", color: PLP_BLUE }}>Snížená provize z vlastních kontaktů: 10–15 %</span><br />
-                        <span style={{ color: MID_GRAY }}>Pokud umělec přivede klienta sám přes váš widget (ClassBento model)</span>
-                      </div>
-                      <div style={{ padding: "10px 0" }}>
-                        <span style={{ fontWeight: "700", color: RED_ACCENT }}>Pozor na DPH:</span><br />
-                        <span style={{ color: MID_GRAY }}>B2B fakturace — ceny prezentovat bez DPH, umělci na OSVČ mohou být pod limitem plátcovství</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, padding: "20px" }}>
-                  <div style={{ fontSize: "12px", fontWeight: "700", color: PLP_BLUE, marginBottom: "12px" }}>Modelový příklad ekonomiky jedné zakázky</div>
-                  <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px" }}>
-                    {[
-                      { label: "Skupina", value: "15 osob" },
-                      { label: "Cena/os. (bez DPH)", value: "1 800 Kč" },
-                      { label: "Celkový výnos", value: "27 000 Kč" },
-                      { label: "Vaše provize (25 %)", value: "6 750 Kč" },
-                    ].map((item, i) => (
-                      <div key={i} style={{ background: LIGHT_BG, padding: "14px", textAlign: "center", border: `1px solid ${BORDER}` }}>
-                        <div style={{ fontSize: "10px", color: MID_GRAY, fontFamily: "monospace", letterSpacing: "1px", textTransform: "uppercase", marginBottom: "6px" }}>{item.label}</div>
-                        <div style={{ fontSize: "16px", fontWeight: "700", color: i === 3 ? RED_ACCENT : PLP_BLUE }}>{item.value}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div style={{ marginTop: "12px", fontSize: "10px", color: MID_GRAY }}>
-                    Pro dosažení 200 000 Kč měsíčního obratu platformy (provize) potřebujete přibližně 30 takových zakázek za měsíc — realistický cíl pro rok 2–3 při aktivním B2B prodeji.
-                  </div>
-                </div>
               </div>
             )}
 
